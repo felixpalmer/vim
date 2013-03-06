@@ -63,4 +63,18 @@ imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
 
+" Folding (remap to space)
+set foldmethod=syntax
+set foldlevel=20
+nnoremap <Space> za
+vnoremap <Space> za
+
+" Plugin config
+" vim-tomorrow-theme
 colorscheme Tomorrow-Night-Bright
+
+" Syntastic
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_jump=1
+let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
+
