@@ -16,6 +16,7 @@ call vundle#rc()
 " github repos
 Bundle 'gmarik/vundle'
 Bundle 'chriskempson/vim-tomorrow-theme'
+Bundle 'kien/ctrlp.vim'
 
 " vim-script repos
 Bundle 'TTCoach'
