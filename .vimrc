@@ -17,6 +17,8 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'kien/ctrlp.vim'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'airblade/vim-gitgutter'
 
 " vim-script repos
 Bundle 'TTCoach'
@@ -79,3 +81,7 @@ let g:syntastic_enable_signs=1
 let g:syntastic_auto_jump=1
 let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
 
+" Indentations
+autocmd FileType html setlocal shiftwidth=4 tabstop=4
+autocmd FileType cpp setlocal shiftwidth=2 tabstop=2
+autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
