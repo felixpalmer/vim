@@ -85,6 +85,7 @@ let g:syntastic_auto_jump=1
 let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
 
 " Indentations
-autocmd FileType html setlocal shiftwidth=4 tabstop=4
 autocmd FileType cpp setlocal shiftwidth=2 tabstop=2
+autocmd FileType html setlocal shiftwidth=4 tabstop=4
+autocmd FileType python setlocal shiftwidth=4 tabstop=4
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
