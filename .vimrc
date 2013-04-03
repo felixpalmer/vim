@@ -72,6 +72,9 @@ set foldlevel=20
 nnoremap <Space> za
 vnoremap <Space> za
 
+" Highlight trailing whitespace
+match Todo /\s\+$/
+
 " Plugin config
 " vim-tomorrow-theme
 colorscheme Tomorrow-Night-Bright
