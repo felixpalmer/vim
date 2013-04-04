@@ -14,11 +14,12 @@ call vundle#rc()
 
 " Plugins to install
 " github repos
-Bundle 'gmarik/vundle'
-Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'kien/ctrlp.vim'
-Bundle 'Valloric/YouCompleteMe'
+Bundle 'gmarik/vundle'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'chriskempson/vim-tomorrow-theme'
+Bundle 'tmhedberg/SimpylFold'
+Bundle 'Valloric/YouCompleteMe'
 
 " vim-script repos
 Bundle 'TTCoach'
@@ -67,7 +68,7 @@ imap <left> <nop>
 imap <right> <nop>
 
 " Folding (remap to space)
-set foldmethod=syntax
+set foldmethod=indent
 set foldlevel=20
 nnoremap <Space> za
 vnoremap <Space> za
@@ -89,3 +90,6 @@ autocmd FileType cpp setlocal shiftwidth=2 tabstop=2
 autocmd FileType html setlocal shiftwidth=4 tabstop=4
 autocmd FileType python setlocal shiftwidth=4 tabstop=4
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
+
+" SimplyFold
+let g:SimpylFold_docstring_preview = 1
