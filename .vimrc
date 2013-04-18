@@ -22,6 +22,7 @@ Bundle 'tmhedberg/SimpylFold'
 Bundle 'jpalardy/vim-slime'
 Bundle 'kien/ctrlp.vim'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'plasticboy/vim-markdown'
 
 " vim-script repos
 Bundle 'TTCoach'
