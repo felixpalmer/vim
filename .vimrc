@@ -97,5 +97,8 @@ autocmd FileType html setlocal shiftwidth=4 tabstop=4
 autocmd FileType python setlocal shiftwidth=4 tabstop=4
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
 
+" Spellcheck (Only for text files)
+autocmd FileType text\|mkd setlocal spell spelllang=en_gb
+
 " SimplyFold
 let g:SimpylFold_docstring_preview = 1
