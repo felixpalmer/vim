@@ -21,7 +21,7 @@ Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'tmhedberg/SimpylFold'
 Bundle 'jpalardy/vim-slime'
 Bundle 'kien/ctrlp.vim'
-Bundle 'Valloric/YouCompleteMe'
+" Bundle 'Valloric/YouCompleteMe' "Requires custom vim build, see https://github.com/Valloric/YouCompleteMe
 Bundle 'plasticboy/vim-markdown'
 
 " vim-script repos
