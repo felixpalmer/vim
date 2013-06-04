@@ -58,7 +58,7 @@ set smartcase
 
 " Quick switching between buffers
 nmap <C-n> :bnext<CR>
-nmap <C-p> :bprev<CR>
+nmap <C-m> :bprev<CR>
 
 " Disable arrow keys
 map <up> <nop>
