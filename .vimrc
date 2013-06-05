@@ -23,6 +23,7 @@ Bundle 'jpalardy/vim-slime'
 Bundle 'kien/ctrlp.vim'
 " Bundle 'Valloric/YouCompleteMe' "Requires custom vim build, see https://github.com/Valloric/YouCompleteMe
 Bundle 'plasticboy/vim-markdown'
+Bundle 'benmills/vimux'
 
 " vim-script repos
 Bundle 'TTCoach'
