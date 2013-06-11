@@ -20,7 +20,6 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'tmhedberg/SimpylFold'
 Bundle 'jpalardy/vim-slime'
-Bundle 'kien/ctrlp.vim'
 " Bundle 'Valloric/YouCompleteMe' "Requires custom vim build, see https://github.com/Valloric/YouCompleteMe
 Bundle 'plasticboy/vim-markdown'
 Bundle 'benmills/vimux'
@@ -103,3 +102,6 @@ autocmd FileType text\|mkd setlocal spell spelllang=en_gb
 
 " SimplyFold
 let g:SimpylFold_docstring_preview = 1
+
+" Ctrl-P
+let g:ctrlp_custom_ignore = '\v[\/](.git|htmlcov|eggs)$'
