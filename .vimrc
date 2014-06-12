@@ -20,9 +20,13 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'tmhedberg/SimpylFold'
 Bundle 'jpalardy/vim-slime'
-" Bundle 'Valloric/YouCompleteMe' "Requires custom vim build, see https://github.com/Valloric/YouCompleteMe
+"Requires custom vim build, see https://github.com/Valloric/YouCompleteMe
+Bundle 'Valloric/YouCompleteMe'
 Bundle 'plasticboy/vim-markdown'
-Bundle 'benmills/vimux'
+Bundle 'file:///Users/felix/git/vimux'
+"Requires v8 to be installed , see https://github.com/joestelmach/lint.vim
+Bundle 'joestelmach/lint.vim'
+Bundle 'vim-scripts/glsl.vim'
 
 " vim-script repos
 Bundle 'TTCoach'
@@ -81,12 +85,16 @@ match Todo /\s\+$/
 
 " Plugin config
 " vim-tomorrow-theme
-colorscheme Tomorrow-Night-Bright
+" colorscheme Tomorrow-Night-Bright
+colorscheme Tomorrow
 
 " Syntastic
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_jump=1
 let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
+
+" Keep syntastic happy with ng- attributes in angular
+let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 
 " Vim slime
 let g:slime_target = "tmux"
@@ -104,4 +112,25 @@ autocmd FileType text\|mkd setlocal spell spelllang=en_gb
 let g:SimpylFold_docstring_preview = 1
 
 " Ctrl-P
-let g:ctrlp_custom_ignore = '\v[\/](.git|htmlcov|eggs)$'
+let g:ctrlp_custom_ignore = {
+  \ 'dir': '\v[\/](.git|.hg|.svn|node_modules)$',
+  \ 'file': '\v[\/](.git|htmlcov|eggs)$'
+  \ }
+
+" GLSL syntax highlighting
+autocmd BufNewFile,BufRead *.vert,*.frag,*.glsl set ft=glsl
+
+" Experiment! Go syntax highlighting
+" Some Linux distributions set filetype in /etc/vimrc.
+" Clear filetype flags before changing runtimepath to force Vim to reload them.
+filetype off
+filetype plugin indent off
+set runtimepath+=$GOROOT/misc/vim
+filetype plugin indent on
+syntax on
+
+" Disable indent folding
+"filetype plugin indent off
+
+" Disable linting
+" let disable_lint = 1 
