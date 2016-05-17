@@ -27,6 +27,8 @@ Bundle 'file:///Users/felix/git/vimux'
 "Requires v8 to be installed , see https://github.com/joestelmach/lint.vim
 Bundle 'joestelmach/lint.vim'
 Bundle 'vim-scripts/glsl.vim'
+Bundle 'zhaocai/GoldenView.Vim'
+Bundle 'kchmck/vim-coffee-script'
 
 " vim-script repos
 Bundle 'TTCoach'
@@ -92,6 +94,7 @@ colorscheme Tomorrow
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_jump=1
 let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
+let g:syntastic_javascript_checkers=['jscs', 'jshint']
 
 " Keep syntastic happy with ng- attributes in angular
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
@@ -113,8 +116,8 @@ let g:SimpylFold_docstring_preview = 1
 
 " Ctrl-P
 let g:ctrlp_custom_ignore = {
-  \ 'dir': '\v[\/](.git|.hg|.svn|node_modules)$',
-  \ 'file': '\v[\/](.git|htmlcov|eggs)$'
+  \ 'dir': '\v[\/](.git|.hg|.svn|node_modules|dem|info)$',
+  \ 'file': '\v\.(pyc|png|jpg)$'
   \ }
 
 " GLSL syntax highlighting
@@ -134,3 +137,13 @@ syntax on
 
 " Disable linting
 " let disable_lint = 1 
+"
+" Goldenview
+" jump to next and previous window
+let g:goldenview__enable_default_mapping = 0
+nmap <silent> <C-W>  <Plug>GoldenViewNext
+nmap <silent> <C-Q>  <Plug>GoldenViewPrevious
+
+" YCM
+let g:ycm_disable_for_files_larger_than_kb = 100
+
