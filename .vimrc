@@ -19,7 +19,6 @@ Bundle 'gmarik/vundle'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'tmhedberg/SimpylFold'
-Bundle 'jpalardy/vim-slime'
 "Requires custom vim build, see https://github.com/Valloric/YouCompleteMe
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'plasticboy/vim-markdown'
@@ -99,6 +98,10 @@ let g:syntastic_javascript_checkers=['jscs', 'jshint']
 " Keep syntastic happy with ng- attributes in angular
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 
+" Turn off for HTML, just too annoying
+let g:syntastic_html_checkers=['']
+let g:syntastic_check_on_open = 0
+
 " Vim slime
 let g:slime_target = "tmux"
 
@@ -147,3 +150,5 @@ nmap <silent> <C-Q>  <Plug>GoldenViewPrevious
 " YCM
 let g:ycm_disable_for_files_larger_than_kb = 100
 
+" GLSL instruction count
+nnoremap <silent> <C-I> :echom "Shader info: " . system("glsl-validate.py --compile " . bufname("%"))<cr>
